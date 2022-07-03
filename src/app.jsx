@@ -23,10 +23,14 @@ const App = () => {
         <div className={"text-center"}>
             <div className={"my-8"}>
                 <form
-                    className={"flex items-center justify-center"}
+                    className={
+                        "flex md:flex-row flex-col items-center justify-center"
+                    }
                     onSubmit={handleSubmit}
                 >
-                    <h1 className={"text-lg font-bold"}>Color Generator</h1>
+                    <h1 className={"text-lg my-1 font-bold"}>
+                        Color Generator
+                    </h1>
                     <input
                         type={"text"}
                         placeholder={"#ffffff"}
@@ -41,14 +45,14 @@ const App = () => {
                                 e.target.blur();
                             }
                         }}
-                        className={`border-black border-2 p-2 mx-4 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500
+                        className={`border-black border-2 p-2 my-1 mx-4 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500
                         ${error && "border-red-500 border-2"}
                         `}
                     />
                     <button
                         type={"submit"}
                         className={
-                            "p-2 ring-2 ring-black hover:text-white hover:bg-black"
+                            "p-2 ring-2 ring-black md:hover:text-white md:hover:bg-black my-1"
                         }
                     >
                         Generate
@@ -57,7 +61,7 @@ const App = () => {
             </div>
             <div
                 className={
-                    "grid grid-cols-fill-column grid-rows-fill-row min-h-[calc(150vh-100px)] my-2 text-start"
+                    "grid grid-cols-fill-column grid-rows-fill-row min-h-[calc(150vh-100px)] my-2 text-start mx-1"
                 }
             >
                 {list.map((color, index) => {
