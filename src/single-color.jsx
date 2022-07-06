@@ -14,7 +14,7 @@ const SingleColor = ({ index, hexColor, alpha, rgb, type, weight }) => {
     }, [alert]);
     return (
         <div
-            className={`px-5 py-8 ${index > 10 && "text-white"}`}
+            className={`relative px-5 py-8 ${index > 10 && "text-white"}`}
             style={{ backgroundColor: `rgb(${RGB})` }}
         >
             <p>{weight}%</p>
@@ -28,7 +28,13 @@ const SingleColor = ({ index, hexColor, alpha, rgb, type, weight }) => {
                 {HEX}
             </p>
             {alert && (
-                <div className={"text-center text-sm"}>Copy to clipboard</div>
+                <div
+                    className={
+                        "text-center text-sm absolute bottom-1 left-2/4 w-full translate-x-[-50%]"
+                    }
+                >
+                    Copy to clipboard
+                </div>
             )}
         </div>
     );
