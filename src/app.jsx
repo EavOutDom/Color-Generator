@@ -61,7 +61,7 @@ const App = () => {
             </div>
             <div
                 className={
-                    "grid grid-cols-fill-column grid-rows-fill-row min-h-[calc(150vh-100px)] my-2 text-start mx-1"
+                    "grid grid-cols-fill-column grid-rows-fill-row"
                 }
             >
                 {list.map((color, index) => {

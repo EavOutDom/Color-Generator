@@ -14,7 +14,7 @@ const SingleColor = ({ index, hexColor, alpha, rgb, type, weight }) => {
     }, [alert]);
     return (
         <div
-            className={`px-5 py-4 ${index > 10 && "text-white"}`}
+            className={`px-5 py-8 ${index > 10 && "text-white"}`}
             style={{ backgroundColor: `rgb(${RGB})` }}
         >
             <p>{weight}%</p>
